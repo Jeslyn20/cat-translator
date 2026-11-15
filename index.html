@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>貓語翻譯所｜貓咪行為圖鑑</title>
+  <meta name="description" content="把貓咪的怪行為翻譯成人話的圖鑑網站。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">🐱 貓語<span>翻譯所</span></a>
+      <nav><a href="index.html">行為圖鑑</a><a href="about.html">關於</a></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="home-hero">
+      <span class="paw-badge">🐾 已翻譯 <span id="count">0</span> 種貓語</span>
+      <h1>你家的貓，<em>到底在想什麼？</em></h1>
+      <p>踩踩、慢眨眼、半夜暴衝……每一個怪行為背後都有原因。點開卡片，看看貓咪的內心話被翻成人話是什麼樣子。</p>
+    </section>
+
+    <div class="toolbar">
+      <input id="search" class="search" type="search" placeholder="搜尋行為，例如：踩、尾巴、叫…" aria-label="搜尋行為">
+      <div class="filters">
+        <button class="filter-btn active" data-cat="all">全部</button>
+        <button class="filter-btn" data-cat="body">身體語言</button>
+        <button class="filter-btn" data-cat="sound">叫聲</button>
+        <button class="filter-btn" data-cat="quirk">怪行為</button>
+        <button class="filter-btn" data-cat="social">社交互動</button>
+      </div>
+    </div>
+
+    <section class="card-grid" id="card-grid"></section>
+  </main>
+
+  <footer class="site-footer">貓語翻譯所 · 翻譯僅供參考，最終解釋權歸貓所有 🐾</footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

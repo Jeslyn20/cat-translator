@@ -1,0 +1,65 @@
+[
+  {
+    "slug": "kneading",
+    "name": "踩踩",
+    "en": "Kneading",
+    "category": "body",
+    "mystery": 2,
+    "emoji": "🍞",
+    "summary": "揉麵團不是我的副業，是我從小到大的本能。"
+  },
+  {
+    "slug": "slow-blink",
+    "name": "慢眨眼",
+    "en": "Slow Blink",
+    "category": "social",
+    "mystery": 1,
+    "emoji": "😌",
+    "summary": "我信任你，所以敢在你面前閉眼。"
+  },
+  {
+    "slug": "tail-up",
+    "name": "尾巴豎直",
+    "en": "Tail Up",
+    "category": "body",
+    "mystery": 1,
+    "emoji": "🙋",
+    "summary": "嗨！是我！我很高興看到你！"
+  },
+  {
+    "slug": "belly-up",
+    "name": "露肚子",
+    "en": "Belly Up",
+    "category": "body",
+    "mystery": 5,
+    "emoji": "🪤",
+    "summary": "我很放鬆……但這不代表你可以摸。"
+  },
+  {
+    "slug": "zoomies",
+    "name": "半夜暴衝",
+    "en": "Zoomies",
+    "category": "quirk",
+    "mystery": 4,
+    "emoji": "🏎️",
+    "summary": "白天睡太飽，現在是我的賽車時間。"
+  },
+  {
+    "slug": "chattering",
+    "name": "對窗外咔咔叫",
+    "en": "Chattering",
+    "category": "sound",
+    "mystery": 3,
+    "emoji": "🐦",
+    "summary": "那隻鳥就在那裡……可惡，玻璃好礙事！"
+  },
+  {
+    "slug": "head-bunting",
+    "name": "用頭撞你",
+    "en": "Head Bunting",
+    "category": "social",
+    "mystery": 1,
+    "emoji": "💥",
+    "summary": "蓋章完畢，你現在是我的人了。"
+  }
+]

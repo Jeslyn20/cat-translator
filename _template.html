@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{中文名稱}}｜貓語翻譯所</title>
+  <meta name="description" content="{{一句話 summary}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<!-- data-slug 必須等於檔名（不含 .html），也等於 behaviors.json 的 slug -->
+<body data-slug="{{slug}}">
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="../index.html">🐱 貓語<span>翻譯所</span></a>
+      <nav><a href="../index.html">行為圖鑑</a><a href="../about.html">關於</a></nav>
+    </div>
+  </header>
+
+  <main class="wrap-narrow">
+    <div class="breadcrumb"><a href="../index.html">行為圖鑑</a> / {{中文名稱}}</div>
+
+    <!-- 1. 頁首（分類標籤與難測指數由 main.js 自動填入 #hero-meta） -->
+    <section class="behavior-hero">
+      <div class="emoji-big">{{emoji}}</div>
+      <h1>{{中文名稱}}</h1>
+      <div class="en">{{English Name}}</div>
+      <div class="hero-meta" id="hero-meta"></div>
+    </section>
+
+    <!-- 2. 貓語 → 人話（人話用貓的第一人稱，30 字內） -->
+    <section class="translate-box">
+      <div class="side cat">
+        <div class="label">貓的動作</div>
+        <div class="text">{{客觀描述貓在做什麼}}</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="side human">
+        <div class="label">翻成人話</div>
+        <div class="text">「{{貓的內心話}}」</div>
+      </div>
+    </section>
+
+    <!-- 3. 為什麼會這樣？（2–3 段，必須正確） -->
+    <section class="section section-why">
+      <h2>🔬 為什麼會這樣？</h2>
+      <p>{{第一段}}</p>
+      <p>{{第二段}}</p>
+    </section>
+
+    <!-- 4. 怎麼分辨？（3–4 個 li） -->
+    <section class="section section-read">
+      <h2>🔍 怎麼分辨？</h2>
+      <ul>
+        <li><strong>{{情境}}</strong>：{{代表的意思}}</li>
+        <li><strong>{{情境}}</strong>：{{代表的意思}}</li>
+        <li><strong>{{情境}}</strong>：{{代表的意思}}</li>
+      </ul>
+    </section>
+
+    <!-- 5. 鏟屎官該怎麼做（✅ 2–3 條、❌ 1–2 條；涉及健康時加 .vet-note） -->
+    <section class="section section-do">
+      <h2>🧹 鏟屎官該怎麼做</h2>
+      <div class="do-grid">
+        <ul class="do-list">
+          <li>{{建議}}</li>
+          <li>{{建議}}</li>
+        </ul>
+        <ul class="dont-list">
+          <li>{{避免}}</li>
+        </ul>
+      </div>
+      <!-- 選用：<p class="vet-note">🩺 如果持續或伴隨其他症狀，請帶去給獸醫檢查。</p> -->
+    </section>
+
+    <!-- 6. 冷知識（1 則） -->
+    <aside class="fun-fact">
+      <span class="label">✨ 冷知識</span>
+      <p>{{一兩句意外的事實}}</p>
+    </aside>
+
+    <!-- 7. 相關行為（1–3 個，只能連到已存在的頁面） -->
+    <section class="related">
+      <h2>🔗 相關行為</h2>
+      <div class="related-links">
+        <a href="{{slug}}.html">{{emoji}} {{中文名稱}}</a>
+      </div>
+    </section>
+
+    <!-- 上一則／下一則：main.js 自動產生，不要手寫 -->
+    <nav class="pager" id="pager"></nav>
+  </main>
+
+  <footer class="site-footer">貓語翻譯所 · 翻譯僅供參考，最終解釋權歸貓所有 🐾</footer>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
