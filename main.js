@@ -1,5 +1,5 @@
 // 貓語翻譯所 — 全站唯一腳本
-// 1) 首頁：讀 data/behaviors.json 產生卡片、搜尋、分類篩選
+// 1) 首頁：讀 behaviors.json 產生卡片、搜尋、分類篩選
 // 2) 行為頁：依 <body data-slug> 產生分類標籤、難測指數、上一則／下一則
 
 const CATEGORIES = {
@@ -10,7 +10,7 @@ const CATEGORIES = {
 };
 
 const isBehaviorPage = document.body.dataset.slug !== undefined;
-const DATA_URL = isBehaviorPage ? "../data/behaviors.json" : "data/behaviors.json";
+const DATA_URL = "behaviors.json"; // 所有檔案都在同一層
 
 function mysteryHTML(n) {
   let s = "";
@@ -45,7 +45,7 @@ function renderHome(list) {
     count.textContent = shown.length;
     grid.innerHTML = shown.length
       ? shown.map((b) => `
-        <a class="card" href="behaviors/${b.slug}.html">
+        <a class="card" href="${b.slug}.html">
           <div class="emoji">${b.emoji}</div>
           <h3>${b.name}</h3>
           <div class="en">${b.en}</div>

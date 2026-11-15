@@ -18,27 +18,39 @@
 
 ---
 
-## 2. 資料夾結構
+## 2. 檔案結構（全部放在同一層，不使用子資料夾）
+
+本專案刻意採用**扁平結構**：所有檔案都放在 repo 根目錄。
+這樣可以直接用 GitHub 網頁「Upload files」上傳，不會因為資料夾沒被保留而讓路徑失效。
+**不可新增任何子資料夾**。檔案用「命名規則」分類（見下表）。
 
 ```
 cat-translator/
+│  ── 規則與說明 ──
 ├── CLAUDE.md              ← 本文件（AI 專案規則）
 ├── AGENTS.md              ← 指向 CLAUDE.md
 ├── README.md              ← 給人看的專案介紹
+├── .nojekyll              ← 讓 GitHub Pages 不經過 Jekyll 處理
+│  ── 固定頁面 ──
 ├── index.html             ← 首頁：行為卡片牆 + 搜尋 + 分類篩選
 ├── about.html             ← 關於頁（說明網站與 AI 擴充方式）
-├── .nojekyll              ← 讓 GitHub Pages 不經過 Jekyll 處理
-├── data/
-│   └── behaviors.json     ← ★ 所有行為頁的「目錄」，首頁和上下頁都靠它
-├── behaviors/
-│   ├── _template.html     ← ★ 新增行為頁時一律複製這個檔案
-│   ├── kneading.html
-│   ├── slow-blink.html
-│   └── ...
-└── assets/
-    ├── css/style.css      ← 全站唯一樣式表
-    └── js/main.js         ← 全站唯一腳本（首頁渲染、搜尋、上下頁導覽）
+│  ── 共用檔（全站各一份）──
+├── style.css              ← 全站唯一樣式表
+├── main.js                ← 全站唯一腳本（首頁渲染、搜尋、上下頁導覽）
+├── behaviors.json         ← ★ 所有行為頁的「目錄」，首頁和上下頁都靠它
+│  ── 行為頁 ──
+├── _template.html         ← ★ 新增行為頁時一律複製這個檔案（底線開頭 = 模板，不是正式頁面）
+├── kneading.html
+├── slow-blink.html
+└── ...（其他 <slug>.html）
 ```
+
+| 檔名樣式 | 代表 |
+|---------|------|
+| `index.html`、`about.html` | 固定頁面，名稱保留，**行為頁的 slug 不可使用 `index`、`about`** |
+| `_` 開頭 | 模板，不會出現在網站上的卡片牆 |
+| `<英文小寫-連字號>.html` | 行為頁，一定要在 `behaviors.json` 有對應的一筆 |
+| `.css` / `.js` / `.json` | 共用檔，全站各只有一份 |
 
 **禁止**新增其他 CSS / JS 檔、禁止在頁面中寫 `<style>` 或 inline `style=""`、
 禁止引入 React、Tailwind、jQuery 等框架或 CDN 套件（Google Fonts 除外）。
@@ -51,10 +63,10 @@ cat-translator/
 
 1. **決定 slug（檔名）**
    - 用英文小寫、單字之間用連字號 `-`，例如 `head-bump`、`chirping`
-   - 檔案放在 `behaviors/<slug>.html`
-2. **複製 `behaviors/_template.html`** 成新檔，填入所有 `{{ }}` 佔位內容，
+   - 檔案直接放在根目錄：`<slug>.html`（不要放進子資料夾）
+2. **複製 `_template.html`** 成新檔，填入所有 `{{ }}` 佔位內容，
    並把 `<body data-slug="">` 設為 slug。不可刪減或調換區塊順序。
-3. **在 `data/behaviors.json` 最後面新增一筆**（格式見第 5 節）。
+3. **在 `behaviors.json` 最後面新增一筆**（格式見第 5 節）。
    陣列順序 = 首頁顯示順序 = 上一頁／下一頁順序。
 4. **檢查相關行為連結**：新頁的「相關行為」只能連到 `behaviors.json` 裡已存在的 slug；
    如果新行為和舊頁面高度相關，也可在舊頁面的「相關行為」補上新頁連結。
@@ -81,7 +93,7 @@ cat-translator/
 
 ---
 
-## 5. `data/behaviors.json` 格式
+## 5. `behaviors.json` 格式
 
 ```json
 {
@@ -148,15 +160,15 @@ cat-translator/
 2. **最小修改**：只改被要求的部分，不要順手重排或重寫其他頁面
 3. **不改共用檔，除非被要求**：`style.css`、`main.js`、`index.html` 的修改需先說明原因
 4. **保持一致**：新頁面的結構必須和現有頁面一模一樣，可用 `kneading.html` 當範例對照
-5. **路徑一律用相對路徑**：行為頁引用資源用 `../assets/...`，首頁用 `assets/...`
-   （GitHub Pages 的網址有 repo 名稱前綴，用 `/assets` 開頭會壞掉）
+5. **路徑一律直接寫檔名**：例如 `style.css`、`main.js`、`kneading.html`，
+   不要加 `/`、`../` 或資料夾名稱（GitHub Pages 的網址有 repo 名稱前綴，用 `/` 開頭會壞掉）
 6. **完成後自我檢查**（見第 9 節）
 
 ---
 
 ## 9. 完成檢查清單
 
-- [ ] 新檔案放在 `behaviors/`，檔名為英文小寫 + 連字號
+- [ ] 新檔案放在根目錄（沒有子資料夾），檔名為英文小寫 + 連字號
 - [ ] `<body data-slug="...">` 與檔名、JSON 的 `slug` 三者一致
 - [ ] 7 個區塊都在，順序正確，沒有殘留 `{{ }}`
 - [ ] `behaviors.json` 是合法 JSON（最後一筆後面沒有逗號）
