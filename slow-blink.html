@@ -9,13 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body data-slug="slow-blink">
-  <header class="site-header">
-    <div class="wrap">
-      <a class="logo" href="index.html">🐱 貓語<span>翻譯所</span></a>
-      <nav><a href="index.html">行為圖鑑</a><a href="about.html">關於</a></nav>
-    </div>
-  </header>
+<body data-page="behavior" data-slug="slow-blink">
+  <header class="site-header" id="site-header"></header>
 
   <main class="wrap-narrow">
     <div class="breadcrumb"><a href="index.html">行為圖鑑</a> / 慢眨眼</div>
@@ -24,6 +19,8 @@
       <h1>慢眨眼</h1>
       <div class="en">Slow Blink</div>
       <div class="hero-meta" id="hero-meta"></div>
+      <div class="hero-actions" id="hero-actions"></div>
+      <div class="clue-chips" id="clue-chips"></div>
     </section>
     <section class="translate-box">
       <div class="side cat">
@@ -76,7 +73,7 @@
     <nav class="pager" id="pager"></nav>
   </main>
 
-  <footer class="site-footer">貓語翻譯所 · 翻譯僅供參考，最終解釋權歸貓所有 🐾</footer>
+  <footer class="site-footer" id="site-footer"></footer>
   <script src="main.js"></script>
 </body>
 </html>

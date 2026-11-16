@@ -9,36 +9,51 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="logo" href="index.html">🐱 貓語<span>翻譯所</span></a>
-      <nav><a href="index.html">行為圖鑑</a><a href="about.html">關於</a></nav>
-    </div>
-  </header>
+<body data-page="home">
+  <!-- 導覽列與頁尾由 main.js 產生 -->
+  <header class="site-header" id="site-header"></header>
 
   <main class="wrap">
     <section class="home-hero">
-      <span class="paw-badge">🐾 已翻譯 <span id="count">0</span> 種貓語</span>
+      <span class="paw-badge">🐾 已收錄 <span id="count">0</span> 種貓語</span>
       <h1>你家的貓，<em>到底在想什麼？</em></h1>
       <p>踩踩、慢眨眼、半夜暴衝……每一個怪行為背後都有原因。點開卡片，看看貓咪的內心話被翻成人話是什麼樣子。</p>
+
+      <div class="progress-wrap">
+        <div class="progress-text"><span id="progress-text">已解鎖 0 種貓語</span><span>📖</span></div>
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      </div>
+
+      <div class="hero-buttons">
+        <button class="btn-primary" id="random-btn">🎲 隨機抽一隻貓語</button>
+        <a class="btn-ghost" href="decoder.html">🔍 我的貓現在在幹嘛？</a>
+        <a class="btn-ghost" href="quiz.html">🎓 貓語小測驗</a>
+      </div>
     </section>
 
     <div class="toolbar">
-      <input id="search" class="search" type="search" placeholder="搜尋行為，例如：踩、尾巴、叫…" aria-label="搜尋行為">
+      <input id="search" class="search" type="search" placeholder="搜尋行為或線索，例如：尾巴、呼嚕、半夜…" aria-label="搜尋行為">
+      <select id="sort" class="sort" aria-label="排序方式">
+        <option value="default">預設排序</option>
+        <option value="mystery-desc">最難懂的貓語優先</option>
+        <option value="mystery-asc">最好懂的貓語優先</option>
+        <option value="name">依名稱</option>
+      </select>
       <div class="filters">
         <button class="filter-btn active" data-cat="all">全部</button>
         <button class="filter-btn" data-cat="body">身體語言</button>
         <button class="filter-btn" data-cat="sound">叫聲</button>
         <button class="filter-btn" data-cat="quirk">怪行為</button>
         <button class="filter-btn" data-cat="social">社交互動</button>
+        <button class="filter-btn" data-cat="fav">❤️ 我的收藏</button>
       </div>
     </div>
+    <p class="result-info" id="result-info"></p>
 
     <section class="card-grid" id="card-grid"></section>
   </main>
 
-  <footer class="site-footer">貓語翻譯所 · 翻譯僅供參考，最終解釋權歸貓所有 🐾</footer>
+  <footer class="site-footer" id="site-footer"></footer>
   <script src="main.js"></script>
 </body>
 </html>

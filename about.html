@@ -8,28 +8,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="logo" href="index.html">🐱 貓語<span>翻譯所</span></a>
-      <nav><a href="index.html">行為圖鑑</a><a href="about.html">關於</a></nav>
-    </div>
-  </header>
+<body data-page="about">
+  <header class="site-header" id="site-header"></header>
 
   <main class="wrap-narrow prose">
     <h1>關於貓語翻譯所</h1>
     <p>這是一個用 AI 協作建立的貓咪行為圖鑑。每一頁都依照同一套格式，把一種貓咪行為「翻譯」成人話，並附上科學解釋、判斷方式和飼主建議。</p>
 
+    <h2>🧰 網站功能</h2>
+    <ul>
+      <li><strong>行為圖鑑</strong>：卡片牆、即時搜尋（也能搜線索）、分類篩選、依難懂程度排序</li>
+      <li><strong>收藏與解鎖</strong>：把喜歡的貓語加入收藏；看過的頁面會蓋上「已解鎖」章，首頁顯示收集進度</li>
+      <li><strong>🎲 隨機抽一隻</strong>：優先帶你去還沒看過的貓語</li>
+      <li><strong>🔍 解碼器</strong>：勾選你看到的線索（尾巴、眼睛、聲音、時機…），推測貓咪的意思</li>
+      <li><strong>🎓 小測驗</strong>：看貓的內心話猜行為，會記錄你的最佳成績</li>
+      <li><strong>🌙 深色模式</strong>：右上角切換，半夜被暴衝吵醒時看也不刺眼</li>
+    </ul>
+    <p>收藏、解鎖進度、深色模式和測驗紀錄都只存在你自己的瀏覽器裡。</p>
+
     <h2>📐 每一頁都長一樣</h2>
     <p>所有行為頁都有 7 個固定區塊：頁首、貓語 → 人話、為什麼會這樣、怎麼分辨、鏟屎官該怎麼做、冷知識、相關行為。上一則／下一則會自動產生。</p>
 
     <h2>🤖 AI 如何繼續擴充</h2>
-    <p>專案根目錄的 <code>CLAUDE.md</code> 寫下了所有規則：檔案結構、模板、資料格式、風格與寫作守則。只要對 AI 說「新增一個貓咪行為：XXX」，它就會照規則複製 <code>_template.html</code>、填好內容，並在 <code>behaviors.json</code> 加一筆，首頁就會自動出現新卡片。</p>
+    <p>專案根目錄的 <code>CLAUDE.md</code> 寫下了所有規則：檔案結構、模板、資料格式、線索字典、風格與寫作守則。只要對 AI 說「新增一個貓咪行為：XXX」，它就會照規則複製 <code>_template.html</code>、填好內容，並在 <code>behaviors.json</code> 加一筆。新的行為會自動出現在首頁、解碼器和小測驗的題庫裡。</p>
 
     <h2>⚠️ 小提醒</h2>
     <p>本站內容整理自一般常見的貓咪行為知識，僅供參考。若貓咪行為突然改變，請諮詢獸醫。</p>
   </main>
 
-  <footer class="site-footer">貓語翻譯所 · 翻譯僅供參考，最終解釋權歸貓所有 🐾</footer>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="main.js"></script>
 </body>
 </html>

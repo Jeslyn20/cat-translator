@@ -6,7 +6,8 @@
     "category": "body",
     "mystery": 2,
     "emoji": "🍞",
-    "summary": "揉麵團不是我的副業，是我從小到大的本能。"
+    "summary": "揉麵團不是我的副業，是我從小到大的本能。",
+    "clues": ["paws-push", "purr", "on-you"]
   },
   {
     "slug": "slow-blink",
@@ -15,7 +16,8 @@
     "category": "social",
     "mystery": 1,
     "emoji": "😌",
-    "summary": "我信任你，所以敢在你面前閉眼。"
+    "summary": "我信任你，所以敢在你面前閉眼。",
+    "clues": ["eyes-slow", "look-at-you"]
   },
   {
     "slug": "tail-up",
@@ -24,7 +26,8 @@
     "category": "body",
     "mystery": 1,
     "emoji": "🙋",
-    "summary": "嗨！是我！我很高興看到你！"
+    "summary": "嗨！是我！我很高興看到你！",
+    "clues": ["tail-up", "greet", "walk-to-you"]
   },
   {
     "slug": "belly-up",
@@ -33,7 +36,8 @@
     "category": "body",
     "mystery": 5,
     "emoji": "🪤",
-    "summary": "我很放鬆……但這不代表你可以摸。"
+    "summary": "我很放鬆……但這不代表你可以摸。",
+    "clues": ["belly", "greet"]
   },
   {
     "slug": "zoomies",
@@ -42,7 +46,8 @@
     "category": "quirk",
     "mystery": 4,
     "emoji": "🏎️",
-    "summary": "白天睡太飽，現在是我的賽車時間。"
+    "summary": "白天睡太飽，現在是我的賽車時間。",
+    "clues": ["night", "eyes-wide", "running"]
   },
   {
     "slug": "chattering",
@@ -51,7 +56,8 @@
     "category": "sound",
     "mystery": 3,
     "emoji": "🐦",
-    "summary": "那隻鳥就在那裡……可惡，玻璃好礙事！"
+    "summary": "那隻鳥就在那裡……可惡，玻璃好礙事！",
+    "clues": ["chatter", "window", "eyes-stare", "tail-twitch"]
   },
   {
     "slug": "head-bunting",
@@ -60,6 +66,57 @@
     "category": "social",
     "mystery": 1,
     "emoji": "💥",
-    "summary": "蓋章完畢，你現在是我的人了。"
+    "summary": "蓋章完畢，你現在是我的人了。",
+    "clues": ["rub", "greet", "tail-up", "walk-to-you"]
+  },
+  {
+    "slug": "purring",
+    "name": "呼嚕呼嚕",
+    "en": "Purring",
+    "category": "sound",
+    "mystery": 3,
+    "emoji": "🚜",
+    "summary": "我的引擎發動了——通常是因為很爽，偶爾是在安慰自己。",
+    "clues": ["purr", "eyes-slow", "on-you"]
+  },
+  {
+    "slug": "meowing-for-food",
+    "name": "喵喵叫要飯",
+    "en": "Meowing for Food",
+    "category": "sound",
+    "mystery": 1,
+    "emoji": "🍚",
+    "summary": "這個叫聲是專門為你學的。現在，碗。",
+    "clues": ["meow", "food-time", "walk-to-you", "tail-up"]
+  },
+  {
+    "slug": "hissing",
+    "name": "哈氣",
+    "en": "Hissing",
+    "category": "sound",
+    "mystery": 1,
+    "emoji": "🐍",
+    "summary": "我很害怕，請你退後，這是最後警告。",
+    "clues": ["hiss", "tail-puff", "arched", "eyes-wide", "ears-back"]
+  },
+  {
+    "slug": "knocking-things-off",
+    "name": "把東西推下桌",
+    "en": "Knocking Things Off",
+    "category": "quirk",
+    "mystery": 4,
+    "emoji": "🥛",
+    "summary": "我只是在做實驗：地心引力今天還在嗎？",
+    "clues": ["on-table", "eyes-stare", "look-at-you"]
+  },
+  {
+    "slug": "if-i-fits",
+    "name": "鑽紙箱",
+    "en": "If I Fits, I Sits",
+    "category": "quirk",
+    "mystery": 2,
+    "emoji": "📦",
+    "summary": "你買的東西不重要，重要的是箱子。",
+    "clues": ["hide", "eyes-stare"]
   }
 ]

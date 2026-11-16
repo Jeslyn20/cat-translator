@@ -10,23 +10,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <!-- data-slug 必須等於檔名（不含 .html），也等於 behaviors.json 的 slug -->
-<body data-slug="{{slug}}">
-  <header class="site-header">
-    <div class="wrap">
-      <a class="logo" href="index.html">🐱 貓語<span>翻譯所</span></a>
-      <nav><a href="index.html">行為圖鑑</a><a href="about.html">關於</a></nav>
-    </div>
-  </header>
+<body data-page="behavior" data-slug="{{slug}}">
+  <!-- 導覽列與頁尾由 main.js 產生，不要手寫 -->
+  <header class="site-header" id="site-header"></header>
 
   <main class="wrap-narrow">
     <div class="breadcrumb"><a href="index.html">行為圖鑑</a> / {{中文名稱}}</div>
 
-    <!-- 1. 頁首（分類標籤與難測指數由 main.js 自動填入 #hero-meta） -->
+    <!-- 1. 頁首（分類標籤、難測指數、收藏／分享按鈕、線索 由 main.js 自動填入） -->
     <section class="behavior-hero">
       <div class="emoji-big">{{emoji}}</div>
       <h1>{{中文名稱}}</h1>
       <div class="en">{{English Name}}</div>
       <div class="hero-meta" id="hero-meta"></div>
+      <div class="hero-actions" id="hero-actions"></div>
+      <div class="clue-chips" id="clue-chips"></div>
     </section>
 
     <!-- 2. 貓語 → 人話（人話用貓的第一人稱，30 字內） -->
@@ -92,7 +90,7 @@
     <nav class="pager" id="pager"></nav>
   </main>
 
-  <footer class="site-footer">貓語翻譯所 · 翻譯僅供參考，最終解釋權歸貓所有 🐾</footer>
+  <footer class="site-footer" id="site-footer"></footer>
   <script src="main.js"></script>
 </body>
 </html>

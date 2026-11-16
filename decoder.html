@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>貓語解碼器｜貓語翻譯所</title>
+  <meta name="description" content="勾選你看到的線索，推測貓咪現在想表達什麼。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="decoder">
+  <header class="site-header" id="site-header"></header>
+
+  <main class="wrap-narrow">
+    <section class="page-hero">
+      <div class="emoji-big">🔍</div>
+      <h1>貓語解碼器</h1>
+      <p>你的貓現在正在做什麼？把觀察到的線索勾起來，翻譯所會列出最可能的意思。勾越多，翻得越準。</p>
+    </section>
+
+    <section class="decoder-panel">
+      <div id="clue-groups"></div>
+      <div class="decoder-actions"><button class="btn-ghost" id="reset-btn">清除全部</button></div>
+    </section>
+
+    <section class="decoder-results" id="decoder-results"></section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="main.js"></script>
+</body>
+</html>
